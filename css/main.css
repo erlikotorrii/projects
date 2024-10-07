@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: rem-calc(50);
+}
+@media (max-width: 425px) {
+  h1 {
+    font-size: rem-calc(33);
+  }
+}
+
+.hero-banner-section {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(/images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-banner-section .hero-banner-content {
+  color: #FFF;
+  text-align: center;
+}
+.hero-banner-section .hero-banner-content .hero-banner-text {
+  width: 90%;
+  padding-left: 25px !important;
+}
+.hero-banner-section .hero-banner-content .hero-banner-text p {
+  padding: 10px 0;
+}
+.hero-banner-section .hero-banner-content button {
+  margin-right: 15px;
+}
+
+.speakers-section .attend-content {
+  text-align: center;
+}
+.speakers-section .featured-speakers h2 {
+  text-align: center;
+}
+.speakers-section .featured-speakers a {
+  text-decoration: none;
+}
+.speakers-section .card {
+  transition: transform 0.5s ease;
+}
+.speakers-section .card:hover {
+  cursor: pointer;
+  color: #007bff;
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.our-event-section h5 {
+  font-weight: bold;
+  font-size: 40px;
+  color: #007bff;
+}
+.our-event-section .col {
+  text-align: center;
+}
+.our-event-section .col p {
+  margin-left: -20px;
+}
+
+.people-sayings-section .sayings-content {
+  border-left: 5px solid #007bff;
+}
+.people-sayings-section .sayings-content p {
+  font-style: italic;
+}
+.people-sayings-section .sayings-content h6 {
+  text-align: end;
+}
+
+.event-preview-section {
+  text-align: center;
+}
+.event-preview-section .youtube-video iframe {
+  width: 60%;
+  height: 45%;
+  border-radius: 10px;
+}
+
+.countdown-section {
+  text-align: center;
+  margin: 0 30px;
+}
+.countdown-section .countdown-text {
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #007bff;
+  animation: pulse 2s infinite;
+}
+.countdown-section .countdown-text .text {
+  color: black;
+  font-size: 18px !important;
+}
+.countdown-section .countdown-text .countdown-numbers {
+  font-weight: bold;
+}
+.countdown-section #countdown {
+  display: flex;
+  justify-content: center;
+}
+.countdown-section #countdown div {
+  margin: 0 10px;
+}
+.countdown-section #countdown span {
+  display: block;
+  font-size: 35px;
+  padding: 0 10px;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.join-section .join-content {
+  line-height: 3;
+}
+
+.about-conference-section p {
+  font-size: 20px;
+}
+
+.past-events-section img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.past-events-section img:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.event-speakers-section .speakers-link {
+  word-spacing: 10px;
+}
+.event-speakers-section .speakers-link a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.schedule-buttons {
+  padding: 0.15rem 0.2rem !important;
+  font-size: 0.75rem !important;
+  font-weight: bold !important;
+}
+
+.register-section .register-content h1 {
+  font-size: 50px;
+}
+.register-section .register-content p {
+  font-size: 22px;
+}
+.register-section .register-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 450;
+}
+footer .footer-content {
+  margin: 0 10px;
+}
+footer .footer-content i {
+  color: #007bff;
+}
+footer .links a {
+  margin: 0 6px;
+}
+footer .rights-content {
+  text-align: center;
+}
+footer .rights-content a {
+  float: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .event-preview-section .youtube-video iframe {
+    width: 100%;
+    height: 40%;
+  }
+  .schedule-section .schedule-agenda .col {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 430px) {
+  .past-events-section img {
+    height: 250px;
+  }
+  .register-section .register-form {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
