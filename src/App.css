@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.artist-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray; 
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.albums-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.album-list-images {
+  width: 100%;
+  height: auto;
+}
+
