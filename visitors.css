@@ -1,0 +1,95 @@
+body{
+    background-color: #FCEBD5;
+}
+nav{
+    font-family: "Reenie Beanie", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #FCEBD5;
+}
+nav p{
+    font-size: 60px;
+    color: #A16A5E;
+}
+
+.first_section {
+    text-align: center;
+}
+.first_section_text h1{
+    color:#A16A5E;
+}
+.first_section_button  button{
+    background-color: #A16A5E;
+    color:#FCEBD5;
+    border: none;
+    margin-top: 13px;
+}
+.main-div{
+    margin-top: -100px;
+}
+
+.moving-images-section .first-images-group{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.moving-images-section .first-images-group img{
+    display: inline-block;
+    animation: moveLeft 25s linear infinite;
+    margin-right: 25px;
+}
+@keyframes moveLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.moving-images-section .second-images-group{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.moving-images-section .second-images-group img{
+    display: inline-block;
+    animation: moveRight 25s linear infinite;
+    margin-right: 25px;
+}
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.carousel-section {
+    padding: 80px;
+    text-align: center;
+}
+.carousel-image {
+    border-right: 5px solid #A16A5E;
+}
+.carousel-image img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 5px solid #A16A5E;
+}
+.carousel-paragraph {
+    background-color: #E09686;
+    padding: 50px;
+    margin-top: -35px;
+    color: white;
+    width: 50%; 
+    margin-left: 25%;   
+}
+.carousel-description {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.carousel-description .paragraph-div{
+    width: 50%;
+}
