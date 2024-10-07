@@ -1,81 +1,118 @@
-function saveDurations() {
-    const studyDuration = document.getElementById('studyDuration').value;
-    const breakDuration = document.getElementById('breakDuration').value;
-
-    localStorage.setItem('studyDuration', studyDuration);
-    localStorage.setItem('breakDuration', breakDuration);
-}
-
-function loadDurations() {
-    if (localStorage.getItem('studyDuration')) {
-        document.getElementById('studyDuration').value = localStorage.getItem('studyDuration');
+const weatherData = [
+    { city: 'New York', temperature: 16, humidity: 70, windSpeed: 7 },
+    { city: 'London', temperature: 12, humidity: 80, windSpeed: 5 },
+    { city: 'Tokyo', temperature: 22, humidity: 60, windSpeed: 4 },
+    { city: 'Sydney', temperature: 25, humidity: 50, windSpeed: 6 },
+    { city: 'Paris', temperature: 15, humidity: 65, windSpeed: 5 },
+    { city: 'Berlin', temperature: 14, humidity: 60, windSpeed: 6 },
+    { city: 'Moscow', temperature: 5, humidity: 75, windSpeed: 10 },
+    { city: 'Toronto', temperature: 17, humidity: 55, windSpeed: 8 },
+    { city: 'Rio de Janeiro', temperature: 26, humidity: 85, windSpeed: 7 },
+    { city: 'Beijing', temperature: 20, humidity: 40, windSpeed: 3 },
+    { city: 'Mumbai', temperature: 30, humidity: 70, windSpeed: 5 },
+    { city: 'Los Angeles', temperature: 19, humidity: 65, windSpeed: 4 },
+    { city: 'Cape Town', temperature: 18, humidity: 60, windSpeed: 6 },
+    { city: 'Rome', temperature: 21, humidity: 55, windSpeed: 3 },
+    { city: 'Bangkok', temperature: 33, humidity: 75, windSpeed: 2 },
+    { city: 'Istanbul', temperature: 20, humidity: 60, windSpeed: 4 },
+    { city: 'Lagos', temperature: 29, humidity: 80, windSpeed: 3 },
+    { city: 'Buenos Aires', temperature: 23, humidity: 70, windSpeed: 5 },
+    { city: 'Chicago', temperature: 10, humidity: 65, windSpeed: 7 },
+    { city: 'Shanghai', temperature: 19, humidity: 80, windSpeed: 6 },
+  ];
+  
+  
+  function fetchWeather(city) {
+    for (let i = 0; i < weatherData.length; i++) {
+      if (weatherData[i].city.toLowerCase() === city.toLowerCase()) {
+        return weatherData[i]; 
+      }
     }
-    if (localStorage.getItem('breakDuration')) {
-        document.getElementById('breakDuration').value = localStorage.getItem('breakDuration');
+  }
+  
+  function displayCurrentWeather(data) {
+    const weatherDisplay = document.getElementById('weatherDisplay');
+  
+    if (data) {
+      weatherDisplay.innerHTML = `
+        <h4>Current weather for ${data.city}</h4>
+        <p>Temperature: ${data.temperature}°C</p>
+        <p>Humidity: ${data.humidity}%</p>
+        <p>Wind Speed: ${data.windSpeed} km/h</p>
+      `;
+    } else {
+      alert("City not found!");
     }
-}
+  }
+  
+  function fetchForecast(city) {
+    const weather = fetchWeather(city);
+    if (!weather) return []; 
+  
+    const forecast = []; 
+    for (let i = 0; i < 5; i++) { 
+      forecast.push({ 
+        day: i + 1,
+        temperature: weather.temperature + i 
+      });
+    }
+    return forecast;
+  }
+  
+  function displayForecast(data) {
+    const weatherDisplay = document.getElementById('weatherDisplay');
+  
+    let forecastHTML = `<h4>5-Day Forecast</h4>`;
+    data.forEach(day => {
+      forecastHTML += `<p>Day ${day.day}: Temperature: ${day.temperature}°C</p>`;
+    });
+  
+    weatherDisplay.innerHTML += forecastHTML;
+  }
+  
+  function searchWeather() {
+    const cityNameInput = document.getElementById('cityName').value;
+    const weather = fetchWeather(cityNameInput);
+  
+    if (weather) { 
+      displayCurrentWeather(weather);
+      displayForecast(fetchForecast(cityNameInput));
+      saveRecentSearch(cityNameInput);
+      displayRecentSearches();
+    } else {
+      displayCurrentWeather(null);
+      displayForecast([]);
+    }
+  }
+  
+  function saveRecentSearch(city) {
+    let recentSearches = JSON.parse(localStorage.getItem('recentSearches')) || [];
+  
+    if (!recentSearches.includes(city)) {
+      recentSearches.push(city); 
+      localStorage.setItem('recentSearches', JSON.stringify(recentSearches));
+    }
+  }
+  
+  function displayRecentSearches() {
+    const recentSearches = JSON.parse(localStorage.getItem('recentSearches')) || [];
+    const recentSearchesContainer = document.getElementById('recentSearches');
+  
+    recentSearchesContainer.innerHTML = ''; 
+  
+    recentSearches.forEach(city => {
+      const cityElement = document.createElement('p');
+      cityElement.textContent = city;
 
-function startSession() {
-    const studyDuration = parseInt(document.getElementById('studyDuration').value);
-    const breakDuration = parseInt(document.getElementById('breakDuration').value);
-
-    saveDurations();
-
-    const totalTimeInSeconds = (studyDuration * 60) + (breakDuration * 60);
-
-    let currentTime = 0;
-    const progressBar = document.getElementById('progressBar');
-    
-    const interval = setInterval(function() {
-        currentTime++;
-        const progress = (currentTime / totalTimeInSeconds) * 100;
-        progressBar.style.width = progress + '%';
-        progressBar.setAttribute('aria-valuenow', progress);
-
-        if (currentTime >= totalTimeInSeconds) {
-            clearInterval(interval);
-            alert('Session completed!');
-            progressBar.style.width = '0%';
-            saveSessionToHistory(studyDuration, breakDuration);
-        }
-    }, 1000); 
-}
-
-document.getElementById('startButton').addEventListener('click', function() {
-    startSession();
-});
-
-let sessionHistory = localStorage.getItem('sessionHistory') ? JSON.parse(localStorage.getItem('sessionHistory')) : [];
-
-function saveSessionToHistory(studyDuration, breakDuration) {
-    const sessionDateAndTime = new Date();
-    const sessionDate = sessionDateAndTime.toLocaleDateString();
-    const sessionTime = sessionDateAndTime.toLocaleTimeString();
-
-    const session = {
-        date: sessionDate,
-        time: sessionTime,
-        studyDuration: parseInt(studyDuration),
-        breakDuration: parseInt(breakDuration)
-    };
-
-    sessionHistory.push(session);
-    localStorage.setItem('sessionHistory', JSON.stringify(sessionHistory));
-
-    showSessionHistory(session);
-}
-
-function showSessionHistory(session) {
-    const sessionHistoryDiv = document.getElementById('sessionHistory');
-
-    const sessionHistoryText = document.createElement('p');
-    sessionHistoryText.innerHTML = `Date: ${session.date}, Time: ${session.time}, Study Duration: ${session.studyDuration} minutes, Break Duration: ${session.breakDuration} minutes`;
-
-    sessionHistoryDiv.appendChild(sessionHistoryText);
-}
-
-sessionHistory.forEach(session => {
-    showSessionHistory(session);
-});
-
-loadDurations();
+      cityElement.addEventListener('click', () => {
+        document.getElementById('cityName').value = city;
+        searchWeather();
+      });
+  
+      recentSearchesContainer.appendChild(cityElement);
+    });
+  }
+  
+  displayRecentSearches();
+  
+  
