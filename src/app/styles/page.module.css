@@ -1,0 +1,981 @@
+/* Header Styles */
+.header {
+    background-color: var(--white);
+}
+
+.hamburger {
+    display: none;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+.ctaText {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.ctaText ul {
+    display: flex;
+    gap: 40px;
+}
+
+.ctaText li {
+    color: var(--black);
+}
+
+.ctaText select {
+    padding: 4px;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    font-size: 1rem;
+}
+
+.nav {
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.leftSideNav,
+.rightSideNav {
+    display: flex;
+    align-items: center;
+}
+
+.leftSideNav ul,
+.rightSideNav ul {
+    display: flex;
+    gap: 40px;
+}
+
+.leftSideNav .homeLink {
+    color: var(--orange);
+}
+
+.rightSideNav .contactLink {
+    border: 1px solid var(--orange);
+}
+
+.rightSideNav a {
+    border: 1px solid transparent;
+    padding: 5px;
+}
+
+.dropdownOpening {
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.dropdownServicesMenu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(217, 217, 217, 0.5);
+    backdrop-filter: blur(15px);
+    padding: 8px 0;
+    width: 90%;
+    z-index: 10;
+}
+
+.dropdownContent {
+    padding: 30px;
+}
+
+.dropdownServicesMenu .innerDiv {
+    padding: 10px;
+    color: var(--black);
+}
+
+.innerDiv svg {
+    margin-bottom: 20px;
+}
+
+.innerDiv p {
+    border-bottom: 1px solid var(--grey);
+}
+
+.innerDiv .dropdownLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+    padding: 10px;
+}
+
+.innerDiv .dropdownLink p {
+    font-size: 15px;
+    border: none;
+}
+
+.innerDiv .dropdownLink h6 {
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+.innerDiv .dropdownLink svg {
+    margin: 0 auto;
+}
+
+/* Styles for HOME PAGE */
+/* Hero section styles */
+.heroSection {
+    background-image: url('/homeImages/hero-section.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: var(--white);
+}
+
+.firstHeroTexts {
+    padding-top: 200px;
+}
+
+.firstHeroTexts h2 {
+    font-size: 50px;
+}
+
+.firstHeroTexts h2:first-child,
+.secondHeroTexts span {
+    color: var(--orange);
+}
+
+.secondHeroTexts h1 {
+    font-size: 85px;
+}
+
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.heroButtons button:first-child {
+    background-color: transparent;
+    border: 2px solid var(--white);
+}
+
+.heroButtons button {
+    background-color: var(--orange);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.heroCtaButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.heroCtaButtons ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.heroCtaButtons li {
+    color: var(--white);
+    cursor: pointer;
+    padding: 60px 90px;
+}
+
+/* Services Section */
+.servicesSection {
+    background-color: var(--grey);
+    color: var(--white);
+    border-top: 3px solid var(--orange);
+}
+
+.servicesListing h2 {
+    color: var(--orange);
+}
+
+.servicesCardRow {
+    padding-bottom: 30px;
+}
+
+.servicesCard {
+    padding: 30px;
+    background-color: var(--dark-grey);
+    margin: 20px;
+    line-height: 1.5;
+}
+
+.servicesCard p {
+    font-size: 15px;
+}
+
+.servicesCard svg {
+    margin-bottom: 20px;
+}
+
+.servicesCard a {
+    padding: 12px;
+    width: 50%;
+    background-color: var(--orange);
+    color: var(--white);
+    text-align: center;
+}
+
+/* Who we are Section */
+.whoWeAreSection {
+    background-color: var(--grey);
+    border-top: 3px solid var(--orange);
+    color: var(--white);
+    padding: 30px;
+}
+
+.whoWeAreSection h2 {
+    color: var(--orange);
+}
+
+.whoWeAreAllBoxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whoWeAreBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid var(--orange);
+}
+
+.whoWeAreBox p {
+    font-size: 20px;
+}
+
+.whoWeAreBox span {
+    color: var(--orange);
+}
+
+.whoWeAreBox svg {
+    margin-right: 10px;
+}
+
+/* Video Section */
+.videoSection {
+    padding: 40px;
+}
+
+.videoSectionContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textVideoSection h1 {
+    color: var(--orange);
+    margin-bottom: 50px;
+}
+
+.textVideoSection a {
+    width: 180px;
+    text-align: center;
+}
+
+.textVideoSection .exploreServicesBtn {
+    border: 2px solid var(--orange);
+    padding: 10px;
+    margin-right: 40px;
+}
+
+.textVideoSection .bookDemoBtn {
+    padding: 12px;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.videoVideoSection img {
+    width: 100%;
+    border-bottom: 3px solid var(--orange);
+}
+
+/* Industries We Serve Section */
+.industriesServedSection {
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.iconsTextIndustries {
+    position: relative;
+    z-index: 100;
+}
+
+.industriesServedLine {
+    border-top: 5px solid var(--black);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 0;
+}
+
+.industriesServedSection h2 {
+    color: var(--orange);
+}
+
+.industriesServedSection a {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 15px;
+    width: 200px;
+}
+
+/* Leadership section */
+.leadershipSection {
+    padding: 40px;
+    border-top: 3px solid var(--orange);
+    background-color: var(--grey);
+    color: var(--white);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.leadershipTeam a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+    padding: 15px;
+    width: 20%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.leadershipText {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.leadershipText h2 {
+    color: var(--orange);
+    margin-bottom: 35px;
+}
+
+.leaderCard {
+    position: relative;
+    background-color: var(--dark-grey);
+    margin: 30px;
+    /* clip-path: polygon(0 92%, 100% 100%, 100% 0, 0 0); */
+    overflow: hidden;
+}
+
+.leaderCard img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.leaderCardText {
+    padding: 15px;
+    position: relative;
+}
+
+.modalButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--black);
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: var(--orange);
+    padding: 20px;
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalImage {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Our Partners Section */
+.ourPartnersSection {
+    padding: 40px;
+}
+
+.ourPartnersSection h2 {
+    color: var(--orange);
+}
+
+.slidePhotosCol {
+    margin: 12px;
+    padding-top: 25px;
+}
+
+.partnersContent {
+    overflow: hidden;
+}
+
+.slidePhotosRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: slide 35s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Reach out section */
+.reachOutSection {
+    padding: 30px;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+}
+
+.reachOutText {
+    background-color: var(--dark-grey);
+    padding: 40px;
+    width: 60%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.reachOutLine {
+    border-top: 5px solid var(--orange);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 0;
+}
+
+.reachOutBtns {
+    padding: 20px;
+}
+
+.reachOutBtns input {
+    border: none;
+    padding: 12px;
+    background-color: var(--white);
+    width: 45%;
+}
+
+.reachOutBtns button {
+    background-color: var(--orange);
+    padding: 12px;
+    border: none;
+    color: var(--white);
+    width: 20%;
+}
+
+/* ISO Certification Section */
+.isoCertificationSection {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificationsContent h2,
+.certificationsContent span {
+    color: var(--orange);
+}
+
+.certificationsContent a {
+    background-color: var(--orange);
+    padding: 15px;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 20 auto;
+    position: relative;
+}
+
+.certificationsLine {
+    border: 2px solid var(--black);
+    margin: 15px 0;
+}
+
+.certificationsList svg {
+    float: right;
+}
+
+/* Newsletter Section */
+.newsletterSection {
+    padding: 50px;
+}
+
+.newsletterRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletterSection h2 {
+    color: var(--orange);
+    margin-top: 50px;
+}
+
+.newsletterInput input {
+    background-color: var(--white);
+    border: none;
+    border-bottom: 2px solid var(--grey);
+    padding: 15px;
+    margin: 30px 0;
+    width: 70%;
+}
+
+.newsletterBtn a {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+/* Join Section */
+.joinSection {
+    padding: 40px;
+    border-top: 5px solid var(--orange);
+}
+
+.joinContent h2 {
+    color: var(--orange);
+}
+
+.joinText {
+    border-left: 2px solid var(--orange);
+}
+
+.joinImg img {
+    width: 70%;
+}
+
+.scrollableContainer {
+    display: flex;
+    overflow-x: auto; 
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.joinCol {
+    min-width: 450px;
+    flex: 0 0 auto;
+    max-width: 100px;
+}
+
+.joinRow {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.scrollableContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollableContainer::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px; 
+}
+
+.scrollableContainer::-webkit-scrollbar-track {
+    background: var(--black);
+    border-radius: 10px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--black);
+}
+
+.footerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-right: 2px solid var(--grey);
+}
+
+.logoFooter img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.certifications {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.certifications img {
+    max-width: 100px;
+}
+
+.partners img {
+    max-width: 200px;
+}
+
+.secondPart {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 20px;
+    color: var(--white);
+}
+
+.servicesFooter,
+.aboutUsFooter,
+.teamFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.secondPart li {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.thirdPart {
+    padding: 40px 20px;
+    color: var(--white);
+}
+
+.contactFooter span {
+    color: var(--orange);
+}
+
+.contactFooter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactFooter input,
+.contactFooter textarea {
+    background-color: var(--grey);
+    border: none;
+    border-bottom: 2px solid var(--white);
+    padding: 5px;
+}
+
+.contactFooter textarea {
+    height: 80px;
+    resize: none;
+}
+
+.contactFooter button {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.forthPart {
+    color: var(--white);
+}
+
+.forthPart .map {
+    margin-bottom: 10px;
+}
+
+.locationFooter li svg {
+    margin-right: 15px;
+}
+
+.footerBottom {
+    background-color: var(--white);
+}
+
+.footerBottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.leftSideFooter {
+    display: flex;
+    align-items: center;
+}
+
+.leftSideFooter ul {
+    display: flex;
+    gap: 40px;
+}
+
+@media screen and (max-width: 430px) {
+
+    /* Mobile styles for Header */
+    .header .bottomSection {
+        display: none;
+    }
+
+    .ctaText {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+    }
+
+
+    /* Styles for HOME PAGE */
+    /* Mobile styles for Hero Section */
+    .firstHeroTexts h2 {
+        font-size: 25px;
+    }
+
+    .secondHeroTexts h1 {
+        font-size: 35px;
+    }
+
+    .heroButtons {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .heroButtons button {
+        display: block;
+        margin: 20px 0;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .heroCtaButtons {
+        border-bottom: 3px solid var(--orange);
+    }
+
+    .heroCtaButtons ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .heroCtaButtons li {
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    /* Mobile style for Services Section */
+    .servicesCardRow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicesCard {
+        width: 80%;
+        margin: 30px 0;
+    }
+
+    /* Mobile style for Who we are Section */
+    .whoWeAreAllBoxes {
+        display: block;
+    }
+
+    .whoWeAreBox {
+        padding: 10px;
+    }
+
+    .whoWeAreBox p {
+        font-size: 15px;
+    }
+
+    .whoWeAreBox svg {
+        width: 40px;
+    }
+
+    /* Mobile style for Video Section */
+    .textVideoSection .exploreServicesBtn,
+    .textVideoSection .bookDemoBtn {
+        margin-right: 0;
+        width: 60%;
+    }
+
+    .videoBtns {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    /* Mobile style for industries we serve section */
+    .industriesServedLine {
+        display: none;
+    }
+
+    .industriesIcons svg {
+        margin-bottom: 20px;
+    }
+
+    /* Mobile style for Leadership Section */
+    .leadershipTeam a {
+        display: block;
+        width: 100%;
+    }
+
+    /* Mobile devices for Partners Section */
+    .slidePhotosRow {
+        animation: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slidePhotosCol {
+        margin: 30px 0;
+        padding-top: 0;
+    }
+
+    /* Mobile style for Reach Out Section */
+    .reachOutText {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .reachOutBtns input,
+    .reachOutBtns button {
+        width: 100%;
+    }
+
+    /* Mobile style for ISO Certfication Section */
+    .certificationsLogo img {
+        margin: 30px;
+        width: 225px;
+    }
+
+    .certificationsContent a {
+        width: 100%;
+    }
+
+    /* Mobile style for Join Section */
+    .joinText {
+        margin: 30px 0;
+    }
+
+    .scrollLine,
+    .scrollPrevNext svg {
+        display: none;
+    }
+
+    /* Mobile styles for Footer */
+    .footerSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .secondPart,
+    .footerBottomSection,
+    .leftSideFooter,
+    .leftSideFooter ul {
+        display: block;
+        text-align: center;
+    }
+
+    .footerBottomSection {
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    .firstPart,
+    .secondPart,
+    .thirdPart,
+    .forthPart {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .servicesFooter ul li,
+    .aboutUsFooter ul li,
+    .teamFooter ul li {
+        font-size: 16px;
+    }
+
+    .secondPart h4 {
+        margin-top: 40px;
+    }
+
+    .contactFooter form input,
+    .contactFooter form textarea {
+        font-size: 16px;
+    }
+
+    .contactFooter {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}

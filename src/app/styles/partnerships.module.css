@@ -1,0 +1,171 @@
+/* Hero Section */
+.heroSection {
+    background-color: var(--grey);
+    padding: 40px;
+    color: var(--white);
+    text-align: center;
+}
+
+.heroContent h1 {
+    font-size: 70px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.heroContent p {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.heroContent span {
+    color: var(--orange);
+}
+
+/* Parntership list section */
+.partnershipListSection {
+    padding: 30px;
+    background-color: var(--grey);
+}
+
+.brainsterPartnership,
+.azurePartnership {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 30px;
+}
+
+.brainsterDiv,
+.azureDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brainsterPartnership img,
+.azurePartnership img {
+    width: 600px;
+    margin: 0 18px;
+}
+
+.brainsterPartnership h4,
+.azurePartnership h4 {
+    margin-top: 20px;
+}
+
+.brainsterPartnership span,
+.azurePartnership span {
+    color: var(--orange);
+}
+
+.microsoftPartnership,
+.salesforcePartnership {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.microsoftText,
+.salesforceText {
+    margin-top: 10%;
+}
+
+.microsoftText span,
+.salesforceText span {
+    color: var(--orange);
+}
+
+.azurePartnership {
+    margin-top: 40px;
+}
+
+.partnershipListSection a {
+    border-bottom: 2px solid var(--orange);
+    color: var(--orange);
+    padding: 15px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+/* Review Section */
+.partnershipsReviewSection {
+    padding: 50px;
+    border-top: 3px solid var(--orange);
+    background-color: var(--grey);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partnershipsReviewDiv {
+    margin-top: 5%;
+}
+
+.reviewContent {
+    margin-top: 20px;
+}
+
+.reviewText {
+    border-left: 2px solid var(--orange);
+}
+
+.reviewImg img {
+    width: 70%;
+}
+
+.scrollableContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 25px;
+}
+
+.scrollableContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollableContainer::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px;
+}
+
+.scrollableContainer::-webkit-scrollbar-track {
+    background: var(--black);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 430px) {
+
+    /* Mobile styles for Hero Section */
+    .heroContent h1 {
+        font-size: 40px;
+    }
+
+    .heroContent p {
+        width: 100%;
+    }
+
+    /* Mobile styles for partnerships list */
+    .brainsterDiv,
+    .azureDiv {
+        display: block;
+    }
+
+    .brainsterPartnership img,
+    .azurePartnership img {
+        width: 250px;
+        margin-top: 25px;
+    }
+
+    .microsoftPartnership img,
+    .salesforcePartnership img {
+        width: 250px;
+    }
+
+    .partnershipListSection a {
+        width: 100%;
+    }
+}

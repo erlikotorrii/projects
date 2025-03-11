@@ -1,0 +1,35 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #FF6F0F;
+  --light-orange: #FFBD91;
+  --pastel-orange: #FF7955;
+  --white: #FFFFFF;
+  --grey: #323232;
+  --dark-grey: #2A2A2A;
+  --black: #000000;
+  --light-grey: #E6E6E6;
+  --silver-grey: #B8B8B8;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+}
+

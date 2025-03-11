@@ -1,0 +1,114 @@
+/* styles for hero section */
+.heroSection {
+    padding: 40px;
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+}
+
+.heroContent h2 {
+    font-size: 70px;
+}
+
+.heroContent h6 {
+    font-size: 24px;
+}
+
+.heroContent span {
+    color: var(--orange);
+}
+
+/* Jobs listing section */
+.jobsListedSection {
+    background-color: var(--white);
+    padding: 40px;
+}
+
+.filterSection {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filterSection select {
+    padding: 15px;
+    margin-right: 40px;
+    margin-bottom: 80px;
+    border: 2px solid var(--orange);
+}
+
+.jobs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.jobContent{
+    background-color: var(--grey);
+    padding: 20px;
+    color: var(--white);
+}
+
+.jobDate {
+    padding: 12px;
+    background-color: var(--white);
+    color: var(--black);
+    width: 25%;
+}
+
+.jobsText span {
+    color: var(--orange);
+}
+
+.jobType {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobType p {
+    padding: 12px;
+    border: 2px solid var(--white);
+    width: 100%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.jobsText button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+@media screen and (max-width: 430px) {
+    /* Mobile styles for hero section */
+    .heroContent h2 {
+        font-size: 40px;
+    }
+
+    .heroContent h6 {
+        font-size: 16px;
+    }
+
+    /* Mobile styles for jobs listed section */
+    .jobsListedSection {
+        padding: 20px;
+    }
+    
+    .jobs {
+        display: block;
+    }
+
+    .jobContent {
+        margin: 10px 0;
+    }
+
+    .filterSection select {
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+}

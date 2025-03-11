@@ -1,0 +1,99 @@
+/* Hero Section */
+.heroSection {
+    background-image: url('/servicesImages/hero-section.svg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heroSectionContent h1 {
+    font-size: 80px;
+}
+
+.heroSectionContent span {
+    color: var(--orange);
+}
+
+.heroSectionContent p {
+    border-left: 2px solid var(--orange);
+    width: 55%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.heroSectionContent button {
+    background-color: var(--orange);
+    border: none;
+    color: var(--white);
+    padding: 20px;
+    width: 20%;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.heroSectionContent button:hover {
+    background-color: var(--pastel-orange);
+}
+
+/* Key Features Section */
+.featuresSection {
+    padding: 40px;
+    background-color: var(--grey);
+}
+
+.featuresText {
+    color: var(--white);
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.featuresText h2 {
+    text-decoration: underline;
+}
+
+.featuresText span {
+    color: var(--orange);
+}
+
+.featuresCol {
+    background-color: var(--white);
+    border-bottom: 3px solid var(--orange);
+    margin: 10px;
+    padding: 50px;
+}
+
+.featuresCol h5 {
+    color: var(--orange);
+}
+
+/* Content Section */
+.contentSection {
+    padding: 40px;
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.content h4 {
+    color: var(--orange);
+    text-align: center;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 430px) {
+    .heroSectionContent h1 {
+        font-size: 40px;
+    }
+
+    .heroSectionContent p {
+        width: 90%;
+    }
+
+    .heroSectionContent button {
+        width: 70%;
+    }
+}

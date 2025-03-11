@@ -1,0 +1,260 @@
+/* hero section styles */
+.heroSection {
+    background-image: url('/newsletterImages/hero-section.svg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroSection h4,
+.heroSection h1 {
+    font-weight: bold;
+    margin-left: 30%;
+}
+
+.heroSection h1 {
+    font-size: 50px;
+}
+
+.heroSection h4 {
+    font-size: 25px;
+}
+
+/* newsletters section */
+.newslettersSection {
+    display: flex;
+}
+
+.leftSidebarNewsletter {
+    flex: 1;
+    padding: 15px;
+}
+
+.leftSidebarNewsletter h2 {
+    color: var(--orange);
+    border-bottom: 3px solid var(--black);
+    padding: 15px;
+    margin-bottom: 40px;
+}
+
+.articleList {
+    max-height: 90%;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.articlePreview {
+    margin-bottom: 15px;
+    background-color: var(--light-grey);
+    color: var(--black);
+    padding: 30px;
+    border-bottom: 3px solid var(--orange);
+}
+
+.articlePreview button {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.newsletterDate {
+    color: var(--orange);
+}
+
+.rightSideContent {
+    flex: 3;
+    padding: 15px;
+    margin-top: 60px;
+}
+
+.articleDetails {
+    margin-top: 10px;
+}
+
+.articleDetails p,
+.articleDetails h6 {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.newsletterSummary {
+    padding: 30px 0;
+    border-top: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+}
+
+.newsletterIntro,
+.newsletterTrends,
+.newsletterCases,
+.newsletterStrategies,
+.newsletterConclusion {
+    margin-top: 50px;
+}
+
+.newsletterConclusion {
+    border-bottom: 5px solid var(--orange);
+    padding: 15px 0;
+}
+
+.articleList::-webkit-scrollbar {
+    height: 3px;
+    width: 7px;
+}
+
+.articleList::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px;
+}
+
+.articleList::-webkit-scrollbar-track {
+    background: var(--black);
+    border-radius: 10px;
+}
+
+.contributorContent {
+    background-color: var(--light-grey);
+    padding: 30px;
+}
+
+.contributorContent input,
+.contributorContent textarea {
+    width: 100%;
+    border: none;
+    background-color: var(--silver-grey);
+    padding: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.contributorContent input::placeholder ,
+.contributorContent textarea::placeholder {
+    color: var(--light-grey);
+}
+
+.contributorContent textarea {
+    resize: none;
+    height: 200px;
+}
+
+.contributorContent button {
+    background-color: var(--orange);
+    color: var(--white);
+    width: 100%;
+    padding: 15px;
+    border: none;
+}
+
+/* newsletters section styles */
+.readMoreSection{
+    background-color: var(--grey);
+    padding: 40px;
+}
+
+.horizontalScrollContainer {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    flex-wrap: nowrap;
+}
+
+.horizontalScrollContainer button {
+    border-bottom: 2px solid var(--orange);
+    padding: 15px;
+    background-color: var(--grey);
+    color: var(--orange);
+    border: none;
+}
+
+.readMorePreview {
+    background-color: var(--light-orange);
+    color: var(--black);
+    padding: 20px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 25%;
+}
+
+.readMorePreview h6 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.readMorePreview p {
+    font-size: 14px;
+}
+
+.readMorePreview button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+    background-color: var(--orange);
+    border: none;
+    cursor: pointer;
+}
+
+.horizontalScrollContainer::-webkit-scrollbar {
+    height: 3px;
+    width: 7px;
+}
+
+.horizontalScrollContainer::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px;
+}
+
+.horizontalScrollContainer::-webkit-scrollbar-track {
+    background: var(--black);
+    border-radius: 10px;
+}
+
+/* subscribe section */
+.newsletterSection {
+    padding: 50px;
+}
+
+.newsletterRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletterSection h2 {
+    margin-top: 50px;
+}
+
+.newsletterRow span {
+    color: var(--orange);
+}
+
+.newsletterInput input {
+    background-color: var(--white);
+    border: none;
+    border-bottom: 2px solid var(--grey);
+    padding: 15px;
+    margin: 30px 0;
+    width: 70%;
+}
+
+.newsletterBtn a {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+@media screen and (max-width: 430px) {
+    .newslettersSection {
+        display: block;
+    }
+
+    .readMoreSection {
+        display: none;
+    }
+}

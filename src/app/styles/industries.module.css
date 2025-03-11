@@ -1,0 +1,101 @@
+/* Hero Section */
+.heroSection {
+    background-image: url('/industriesImages/hero-section.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heroSectionContent h1 {
+    font-size: 80px;
+}
+
+.heroSectionContent span {
+    color: var(--orange);
+}
+
+/* Industries Section */
+.industriesSection {
+    background-color: var(--white);
+    padding: 40px;
+}
+
+.industriesDiv {
+    background-color: var(--grey);
+    margin: 10px;
+    padding: 20px;
+    color: var(--white);
+}
+
+.industriesDiv svg,
+.industriesDiv h4,
+.industriesDiv button {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.industriesDiv button {
+    padding: 20px;
+    border: none;
+    width: 20%;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+/* Newsletter section */
+.newsletterSection {
+    padding: 40px;
+    border-top: 3px solid var(--orange);
+}
+
+.newsletterRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletterSection h2 {
+    margin-top: 50px;
+}
+
+.newsletterSection p {
+    color: var(--orange);
+}
+
+.newsletterInput input {
+    background-color: var(--white);
+    border: none;
+    border-bottom: 2px solid var(--grey);
+    padding: 15px;
+    margin: 30px 0;
+    width: 70%;
+}
+
+.newsletterBtn a {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+@media screen and (max-width: 430px) {
+    /* Mobile styles for hero section */
+    .heroSectionContent h1 {
+        font-size: 40px;
+    }
+
+    .industriesDiv p {
+        font-size: 12px;
+    }
+
+    .industriesDiv button {
+        width: 100%;
+    }
+}

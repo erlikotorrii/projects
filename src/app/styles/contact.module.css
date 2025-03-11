@@ -1,0 +1,89 @@
+/* styles for hero section */
+.heroSection {
+    background-color: var(--grey);
+    padding: 80px;
+    color: var(--white);
+    text-align: center;
+}
+
+/* Styles for contact form section */
+.contactFormSection {
+    padding: 40px;
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.contactText h1 {
+    font-size: 70px;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.contactText h6 {
+    font-size: 20px;
+}
+
+.contactInfo {
+    margin-top: 40px;
+    line-height: 0.5;
+}
+
+.contactQuestion {
+    margin-top: 40px;
+}
+
+.contactQuestion p {
+    display: flex; 
+    align-items: center; 
+}
+
+.contactQuestion span {
+    background-color: var(--orange);
+    color: var(--white);
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 40px;
+    height: 40px; 
+    border-radius: 50%; 
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+    background-color: var(--dark-grey);
+    width: 90%;
+    padding: 10px;
+    border: none;
+}
+
+.contactForm select {
+    color: var(--white);
+}
+
+.contactForm textarea {
+    resize: none;
+    height: 300px;
+}
+
+.contactForm p {
+    color: var(--orange);
+    margin-top: 30px;
+}
+
+.contactForm button {
+    width: 90%;
+    padding: 16px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--orange);
+    border: none;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 430px) {
+    .contactQuestion span {
+        display: none;
+    }
+}
